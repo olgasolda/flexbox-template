@@ -1,0 +1,20 @@
+@use "../presets/" as *;
+@use "../mixins/" as *;
+
+.main {
+  order: 2;
+
+  @include lg-min {
+    flex: 0 0 calc(100% - 220px - 240px);
+    padding-right: $gap;
+    padding-left: $gap;
+  }
+  @include lg-md {
+    flex: 0 0 calc(100% - 220px);
+    padding-right: 0;
+    padding-left: $gap;
+  }
+  @include md {
+    order: 1;
+  }
+}

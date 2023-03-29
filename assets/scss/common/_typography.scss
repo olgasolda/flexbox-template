@@ -1,0 +1,65 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  transition: opacity 1s ease 0s;
+  opacity: 1;
+  background-color: $color-warning;
+  background-image: url(../img/global-bg.jpg);
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+
+  @include lg-min {
+    padding: 0 $gap;
+}
+@include lg {
+  padding: 0 $gap-sm;
+}
+}
+head {
+  display: none;
+}
+html {
+  display: block;
+  overflow: hidden;
+  font-family: $font-main;
+  font-size: $font-size;
+  line-height: 1.5em;
+}
+main {
+  display: block;
+}
+img {
+  border-style: none;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+li {
+  display: list-item;
+}
+a {
+  text-decoration: none;
+  color: $color-light;
+}
+a:hover,
+a:focus {
+  color: $color-accent;
+}
