@@ -1,1 +1,21 @@
 @use "../widgets/" as *;
+@use "../mixins/" as *;
+@use "../presets/" as *;
+
+.left {
+  @include md-min {
+    flex: 0 0 220px;
+    order: 1;
+    margin-bottom: $gap-sm;
+  }
+  @include md-xs {
+    order: 2;
+    width: 50%;
+    padding-right: 7.5px;
+  }
+  @include xs {
+    order: 2;
+    width: 100%;
+    margin-bottom: 0;
+  }
+}

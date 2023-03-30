@@ -38,6 +38,9 @@ html {
 main {
   display: block;
 }
+aside {
+  display: block;
+}
 img {
   border-style: none;
 }
@@ -62,4 +65,7 @@ a {
 a:hover,
 a:focus {
   color: $color-accent;
+}
+p {
+  color: $color-gray;
 }
