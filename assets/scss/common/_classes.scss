@@ -3,6 +3,7 @@
 
 .container {
   display: flex;
+
   @include lg {
     flex-wrap: wrap;
   }

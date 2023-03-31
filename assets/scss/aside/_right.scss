@@ -6,7 +6,8 @@
   order: 3;
 
   @include lg-min {
-    flex: 0 0 240px;
+    flex: 0 0 $right-sidebar-width;
+
     margin-bottom: $gap-sm;
   }
   @include lg-md {

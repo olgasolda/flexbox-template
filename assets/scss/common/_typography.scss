@@ -8,9 +8,11 @@
 }
 body {
   width: 100%;
-  max-width: 1380px;
+  max-width: $xl;
   margin: 0 auto;
+
   transition: opacity 1s ease 0s;
+
   opacity: 1;
   background-color: $color-warning;
   background-image: url(../img/global-bg.jpg);
@@ -20,10 +22,10 @@ body {
 
   @include lg-min {
     padding: 0 $gap;
-}
-@include lg {
-  padding: 0 $gap-sm;
-}
+  }
+  @include lg {
+    padding: 0 $gap-sm;
+  }
 }
 head {
   display: none;
@@ -31,6 +33,7 @@ head {
 html {
   display: block;
   overflow: hidden;
+
   font-family: $font-main;
   font-size: $font-size;
   line-height: 1.5em;
@@ -53,10 +56,10 @@ strong {
   font-weight: bolder;
 }
 ul {
-  margin-block-start: 1em;
   margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  margin-block-start: 1em;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
   padding-inline-start: 40px;
 }
 li {
@@ -64,6 +67,7 @@ li {
 }
 a {
   text-decoration: none;
+
   color: $color-light;
 }
 a:hover,

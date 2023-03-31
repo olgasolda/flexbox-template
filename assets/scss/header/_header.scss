@@ -3,8 +3,10 @@
 
 .header {
   overflow: hidden;
+
   min-height: 100px;
   margin-bottom: $gap;
+
   border-radius: 0 0 7px 7px;
-  background-color:rgba($color-dark, 0.5);
+  background-color: rgba($color-dark, 0.5);
 }
