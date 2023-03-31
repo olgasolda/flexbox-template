@@ -37,8 +37,12 @@ html {
 }
 main {
   display: block;
+  flex-grow: 1;
 }
 aside {
+  display: block;
+}
+footer {
   display: block;
 }
 img {
