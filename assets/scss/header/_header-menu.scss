@@ -32,40 +32,40 @@
     }
 
     &-item {
-      @include sm{
+      @include sm {
         &:last-child {
           margin-bottom: 5px;
         }
       }
 
       a {
-      display: block;
+        display: block;
 
-      margin: 5px;
-      padding: 10px $gap-sm;
+        margin: 5px;
+        padding: 10px $gap-sm;
 
-      border-radius: 4px;
+        border-radius: 4px;
 
-      @include sm {
-        margin-top: 0;
-        margin-bottom: 0;
+        @include sm {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        &:hover,
+        &:focus {
+          color: $color-button-accent;
+          background-color: rgba($color-dark, 0.4);
+          text-shadow: 1px 1px 3px $color-dark, 1px 1px 10px $color-dark;
+        }
       }
 
-      &:hover,
-      &:focus {
+      &.active a {
         color: $color-button-accent;
-        background-color: rgba($color-dark, 0.4);
+        background: rgba($color-dark, 0.4);
         text-shadow: 1px 1px 3px $color-dark, 1px 1px 10px $color-dark;
       }
     }
-
-    &.active a {
-      color: $color-button-accent;
-      background: rgba($color-dark, 0.4);
-      text-shadow: 1px 1px 3px $color-dark, 1px 1px 10px $color-dark;
-    }
   }
-}
 }
 
 .header-menu__btn {
