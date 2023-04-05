@@ -860,6 +860,10 @@ p {
 }
 
 @media (max-width: 991.8px) {
+  .footer-top {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .main {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;

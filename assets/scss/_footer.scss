@@ -10,6 +10,10 @@
     margin-right: -7.5px;
     margin-left: -7.5px;
 
+    @include md {
+      flex-wrap: wrap;
+    }
+
     &__item {
       padding: 0 7.5px;
 
