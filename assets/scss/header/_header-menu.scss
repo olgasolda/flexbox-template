@@ -8,37 +8,6 @@
 
   background-color: rgba($color-dark, 0.3);
 
-  &__btn {
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-
-    width: 50px;
-    height: 50px;
-
-    cursor: pointer;
-
-    background-color: rgba($color-dark, 0.2);
-
-    @include sm-min {
-      display: none;
-    }
-    @include sm {
-      display: flex;
-    }
-
-    &-row {
-      position: relative;
-
-      width: 60%;
-      height: 2px;
-      margin: 2px 0;
-
-      transition: 0.5s;
-
-      background-color: $color-light;
-    }
-  }
   &__list {
     margin: 0;
     padding: 0;
@@ -56,13 +25,31 @@
       text-align: center;
     }
 
-    &-item a {
+    &.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+      @include sm{
+        &:last-child {
+          margin-bottom: 5px;
+        }
+      }
+
+      a {
       display: block;
 
       margin: 5px;
       padding: 10px $gap-sm;
 
       border-radius: 4px;
+
+      @include sm {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
       &:hover,
       &:focus {
         color: $color-button-accent;
@@ -71,10 +58,61 @@
       }
     }
 
-    &-item.active a {
+    &.active a {
       color: $color-button-accent;
       background: rgba($color-dark, 0.4);
       text-shadow: 1px 1px 3px $color-dark, 1px 1px 10px $color-dark;
+    }
+  }
+}
+}
+
+.header-menu__btn {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  cursor: pointer;
+
+  background-color: rgba($color-dark, 0.2);
+
+  @include sm-min {
+    display: none;
+  }
+  @include sm {
+    display: flex;
+  }
+
+  &-row {
+    position: relative;
+
+    width: 60%;
+    height: 2px;
+    margin: 2px 0;
+
+    transition: 0.5s;
+
+    background-color: $color-light;
+  }
+
+  &.active .header-menu__btn-row {
+    &:first-child {
+      top: 6px;
+
+      transform: rotate(-135deg);
+    }
+
+    &:last-child {
+      top: -6px;
+
+      transform: rotate(-225deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
     }
   }
 }
